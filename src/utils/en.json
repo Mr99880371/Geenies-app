@@ -1,0 +1,15 @@
+{
+    "Components": {
+        "Header": {
+            "whatdouknow": "What do you know?",
+            "location": "Location",
+            "search": "Search"
+        },
+        "Banner": {
+            "title": "Test your knowledge and get results in the themes that are popular in the culture."
+        },
+        "Button": {
+            "title": "Start"
+        }
+    }
+}

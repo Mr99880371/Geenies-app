@@ -1,0 +1,15 @@
+{
+    "Components": {
+        "Header": {
+            "whatdouknow": "O que você sabe?",
+            "location": "Localização",
+            "search": "Procurar"
+        },
+        "Banner": {
+            "title": "Teste seus conhecimentos e obtenham resultados nos temas que bombam na cultura pop."
+        },
+        "Button": {
+            "title": "Iniciar"
+        }
+    }
+}
