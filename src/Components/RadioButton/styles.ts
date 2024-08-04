@@ -1,7 +1,7 @@
 import { css } from '@emotion/native';
 import { StyleSheet } from 'react-native';
 
-const useStyles = StyleSheet.create({
+const styles = StyleSheet.create({
 container: css`
       flex-direction: row;
       align-items: center;
@@ -48,4 +48,4 @@ container: css`
     `,
 })
 
-export default useStyles;
+export default styles;

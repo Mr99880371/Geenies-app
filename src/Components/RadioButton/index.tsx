@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import { View, Text, TextStyle, ViewStyle } from 'react-native';
 import RadioButtonRN from './RadionButtonRN';
-import useStyles from './styles';
+import styles from './styles';
 
 interface RadioItem {
   label: string;
@@ -45,7 +45,7 @@ const RadioButton: FunctionComponent<RadioButtonProps> = ({
     text,
     innerContainer,
     textDisabled,
-  } = useStyles({});
+  } = styles;
   const [radioSelected, setRadioSelected] = useState<RadioItem>({
     label: '',
     value: '',

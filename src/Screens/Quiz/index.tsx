@@ -1,10 +1,9 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, ScrollView, Text, Image } from 'react-native';
+import { View, ScrollView, Text, Image, Button } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { ButtonIn } from '../../Components/Button';
 import { useTranslation } from 'react-i18next';
-import useStyles from './styles';
+import styles from './styles';
 import { RootState } from '../../store/modules/rootReducer';
 import FirstQuestion from './FirstQuestion';
 import { SecondQuestion } from './SecondQuestion';
@@ -23,8 +22,7 @@ export const Quiz = () => {
   const [answers, setAnswers] = useState<string[]>([]);
   const navigation = useNavigation<any>();
   const { t } = useTranslation();
-  const { container, title, mainTitle, mainText, cardsTextContainer } =
-    useStyles({});
+  const { container, title, mainTitle, mainText, cardsTextContainer } = styles;
 
   function HandleStep() {
     switch (step) {
@@ -83,7 +81,7 @@ export const Quiz = () => {
 
   return (
     <View style={container}>
-      <ButtonIn
+      <Button
         onPress={() => {
           if (step > 1 && !result) {
             setStep((s) => --s);
@@ -127,9 +125,7 @@ export const Quiz = () => {
                   color: '#000',
                 }}
               >
-                {t(
-                  'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.itsTime'
-                )}
+                Etapa 1
               </Text>
             </View>
 
@@ -158,11 +154,11 @@ export const Quiz = () => {
             </View>
             {HandleStep()}
             <View>
-              <ButtonIn
+              <Button
                 title={t(
                   'next'
                 )}
-                fullWidth
+                // fullWidth
                 style={{
                   borderTopWidth: 1,
                   padding: 15,
@@ -205,9 +201,7 @@ export const Quiz = () => {
                 color: '#000',
               }}
             >
-              {t(
-                'quiz Time'
-              )}
+              meu quiz
             </Text>
             <View style={{ alignItems: 'center' }}>
               {result === '1' ? (
@@ -275,9 +269,9 @@ export const Quiz = () => {
                     )}
             </Text>
 
-            <ButtonIn
-              fullWidth
-              outline
+            <Button
+              // fullWidth
+              // outline
               style={{ marginTop: 10 }}
               onPress={() => {
                 dispatch(resetStep());
@@ -285,9 +279,7 @@ export const Quiz = () => {
                   paramKey: 3,
                 });
               }}
-              title={t(
-                'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.goBack'
-              )}
+              title="Esse botao"
             />
           </View>
         )}

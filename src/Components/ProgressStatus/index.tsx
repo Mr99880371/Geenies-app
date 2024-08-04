@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import iconLeft from 'react-native-vector-icons/Entypo';
 import { ProgressStatusProps } from './types';
-import useStyles from './styles';
+import styles from './styles';
 import { useTranslation } from 'react-i18next';
 
 const ProgressStatus: FunctionComponent<ProgressStatusProps> = ({
@@ -32,7 +32,7 @@ const ProgressStatus: FunctionComponent<ProgressStatusProps> = ({
     progressBar,
     progressBarLine,
     progressBarStatus,
-  } = useStyles({});
+  } = styles;
   const navigation = useNavigation<any>();
 
   return (

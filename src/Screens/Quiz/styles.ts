@@ -1,8 +1,8 @@
 import { css } from '@emotion/native';
 import { StyleSheet } from 'react-native';
 
-const useStyles = StyleSheet.create({
-container: css`
+const styles = StyleSheet.create({
+    container: css`
       flex: 1;
     `,
     verticalScrollView: css`
@@ -34,4 +34,4 @@ container: css`
     `,
 })
 
-export default useStyles;
+export default styles;

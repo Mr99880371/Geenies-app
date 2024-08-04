@@ -5,11 +5,12 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 type RootStackParamList = {
+  Home: undefined;
   Quiz: undefined;
   // Adicione outras telas aqui
 };
 
-type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Quiz'>;
+type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
 export function ButtonIn() {
   const { t } = useTranslation();

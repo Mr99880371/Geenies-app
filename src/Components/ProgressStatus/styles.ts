@@ -1,7 +1,7 @@
 import { css } from '@emotion/native';
 import { StyleSheet } from 'react-native';
 
-const useStyles = StyleSheet.create({
+const styles = StyleSheet.create({
 mainContainer: css`
       width: 100%;
       margin: 0 0 5px;
@@ -72,4 +72,4 @@ mainContainer: css`
       border-color: #000;
     `,
 })
-export default useStyles;
+export default styles;

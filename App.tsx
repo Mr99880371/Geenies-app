@@ -1,20 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Provider } from 'react-redux'
 import { store } from './src/store'
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   useColorScheme,
   View,
 } from 'react-native';
-import { ButtonIn } from './src/Components/Button';
-import { Header } from './src/Components/Header';
-import { Banner } from './src/Components/Banner';
-import { useTranslation } from 'react-i18next';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Quiz } from './src/Screens/Quiz';
+import { Home } from './src/Components/Home';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -23,7 +19,6 @@ type SectionProps = PropsWithChildren<{
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
-  const { t } = useTranslation();
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -32,21 +27,17 @@ function App(): React.JSX.Element {
 
   return (
     <Provider store={store}>
-    <SafeAreaView style={{flex: 1}}>
-      <View style={{backgroundColor: backgroundStyle.backgroundColor, padding: 20}}>
-        <Header />
-      </View>
-      <Banner />
-      <ScrollView>
-        <ButtonIn title={t('Components:Button.title')} />
-      </ScrollView>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={ButtonIn} />
-          <Stack.Screen name="Quiz" component={Quiz} />
-        </Stack.Navigator>
+        <SafeAreaView style={{flex: 1}}>
+          <View style={{backgroundColor: backgroundStyle.backgroundColor, padding: 20}}>
+            {/* Seu conteúdo de cabeçalho aqui */}
+          </View>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Quiz" component={Quiz} />
+          </Stack.Navigator>
+        </SafeAreaView>
       </NavigationContainer>
-    </SafeAreaView>
     </Provider>
   );
 }

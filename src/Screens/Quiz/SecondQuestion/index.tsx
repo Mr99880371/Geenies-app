@@ -19,21 +19,15 @@ const SecondQuestion = () => {
   const { t } = useTranslation();
   const radioProps = [
     {
-      label: t(
-        'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.secondQuestion.phrase1'
-      ),
+      label: 'Sim, as vezes',
       value: '1',
     },
     {
-      label: t(
-        'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.secondQuestion.phrase2'
-      ),
+      label: 'Não, muito raramente',
       value: '2',
     },
     {
-      label: t(
-        'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.secondQuestion.phrase3'
-      ),
+      label: 'Não, não faço ideia',
       value: '3',
     },
   ];
@@ -64,9 +58,7 @@ const SecondQuestion = () => {
               color: '#000',
             }}
           >
-            {t(
-              'screens:pvPartnersContent.maternalOptionsContainer.supportOptions.quiz.secondQuestion.currentlyIs'
-            )}
+            em uma escala de um a 10 como você classifica?
           </Text>
 
           <View style={{ paddingBottom: 15 }}>
